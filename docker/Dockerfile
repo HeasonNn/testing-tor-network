@@ -2,6 +2,10 @@ FROM debian:12.7
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+ENV https_proxy=http://10.162.234.254:7890 
+ENV http_proxy=http://10.162.234.254:7890 
+ENV all_proxy=socks5://10.162.234.254:7890
+
 # Most of these are installed for debugging purposes
 RUN apt-get update && apt-get install apt-transport-https wget gpg iproute2 iputils-ping sudo vim procps bash-completion curl tcpdump telnet screen -y
 COPY tor.list /etc/apt/sources.list.d/tor.list

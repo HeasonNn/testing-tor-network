@@ -8,7 +8,7 @@ CLI_DIR := cli
 STATUS_FILE := $(CLI_DIR)/status.json
 
 # If for some reason you don't like 10.5.0.0/16, you can change it here
-TOR_SUBNET := 10.5.0.0/16
+TOR_SUBNET := 172.200.0.0/16
 
 install:
 	@pipenv install
